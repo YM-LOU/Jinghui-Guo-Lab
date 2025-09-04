@@ -17,6 +17,9 @@ title: Ionic Lab | Jinghui GUO
 subtitle: At The Chinese University of Hong Kong, Shenzhen
 name: "Jiawei Lin"
 email: guojinghui@cuhk.edu.cn
+url: "https://ym-lou.github.io"
+baseurl: "/Jinghui-Guo-Lab"
+repository: "ym-lou/Jinghui-Guo-Lab"
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
