@@ -7,3 +7,5 @@ main:
     url: /publications/
   - title: "Gallary"
     url: /gallery/
+  - title: "IonicLINK"
+    url: /ioniclink/
