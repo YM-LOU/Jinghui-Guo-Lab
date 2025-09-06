@@ -23,4 +23,49 @@
 </div>
 {% endif %}
 
-<div class="page__footer-copyright">&copy; {% assign site_time = site.time | date: '%Y' %}{% if site.footer.since and site_time != site.footer.since %}{{ site.footer.since }} - {% endif %}{{ site_time }} <a href="{{ site.copyright_url | default: site.url }}">{{ site.copyright | default: site.title | escape_once | strip }}</a>.</div>
+<div class="page__footer-copyright">
+  <div class="footer-left">
+    &copy; {% assign site_time = site.time | date: '%Y' %}{% if site.footer.since and site_time != site.footer.since %}{{ site.footer.since }} - {% endif %}{{ site_time }} <a href="{{ site.copyright_url | default: site.url }}">{{ site.copyright | default: site.title | escape_once | strip }}</a>. 
+    <!-- 您可以在这里更改"Designed by"部分 -->
+    Designed by Yumu LOU. 
+  </div>
+  
+  <div class="footer-right">
+    Ionic Function and Modulation Laboratory<br>
+    The Chinese University of Hong Kong, Shenzhen<br>
+    School of Medicine<br>
+    Research Complex, Room Rx 509<br>
+    Longxiang Blvd. 2001, Longgang District,<br>
+    Shenzhen, Guangdong, China, 518172
+  </div>
+</div>
+
+<style>
+.page__footer-copyright {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.footer-left, .footer-right {
+  margin: 10px 0;
+}
+
+.footer-right {
+  text-align: right;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .page__footer-copyright {
+    flex-direction: column;
+  }
+  
+  .footer-right {
+    text-align: left;
+    margin-top: 20px;
+  }
+}
+</style>
