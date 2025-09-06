@@ -107,6 +107,7 @@ defaults:
     values:
       layout: single
       author_profile: false
+      sidebar: false
       read_time: true
       comments: true
       share: true
