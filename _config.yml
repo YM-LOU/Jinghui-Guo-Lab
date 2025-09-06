@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Ionic Lab | Prof. Jinghui GUO
-subtitle: School of Medcine, The Chinese University of Hong Kong, Shenzhen
+#subtitle: School of Medcine, The Chinese University of Hong Kong, Shenzhen
 name: "Jiawei Lin"
 email: guojinghui@cuhk.edu.cn
 url: "https://ym-lou.github.io"
@@ -93,7 +93,7 @@ footer:
       url: "https://github.com/"
     - label: "Email"
       icon: "fas fa-envelope"
-      url: "guojinghui@cuhk.edu.cn"
+      url: "mailto:guojinghui@cuhk.edu.cn"
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
