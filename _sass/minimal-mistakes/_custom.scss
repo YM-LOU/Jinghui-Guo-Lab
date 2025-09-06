@@ -1,38 +1,19 @@
-/* 完全移除侧边栏 */
+/* 确保没有意外显示 */
 .sidebar {
   display: none !important;
 }
 
-/* 调整主内容区域宽度 */
+/* 调整主内容区域 */
 .page {
-  @include breakpoint($large) {
-    float: none;
-    width: 100%;
-    padding-right: 0;
-  }
+  width: 100%;
+  padding-right: 0;
 }
 
-/* 调整页面内部布局 */
 .page__inner-wrap {
-  display: block !important;
+  display: block;
   
   .page__content,
   .page__related {
-    @include breakpoint($large) {
-      width: 100%;
-      float: none;
-    }
-  }
-}
-
-/* 移除侧边栏相关的留白 */
-.page__related {
-  margin-top: 3em;
-}
-
-/* 可选：调整头部布局（如果受影响） */
-.masthead {
-  @include breakpoint($large) {
     width: 100%;
   }
 }
