@@ -119,6 +119,7 @@ defaults:
     values:
       layout: single
       author_profile: false
+      sidebar: false
 
 category_archive:
   type: liquid
