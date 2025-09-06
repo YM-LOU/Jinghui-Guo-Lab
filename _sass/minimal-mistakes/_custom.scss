@@ -18,7 +18,25 @@
   padding-bottom: 3rem;
 }
 
+.initial-content {
+  padding-top: 40px;    // 上边距
+  padding-bottom: 60px; // 下边距
+  padding-left: 30px;   // 左边距
+  padding-right: 30px;  // 右边距
+
+  // 响应式调整（使用主题断点变量）
+  @include breakpoint($medium) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include breakpoint($large) {
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+}
+
 /* 测试代码 - 添加醒目标记 */
 body {
-  background-color: red !important; /* 测试自定义文件是否加载 */
+  background-color: blue !important; /* 测试自定义文件是否加载 */
 }
