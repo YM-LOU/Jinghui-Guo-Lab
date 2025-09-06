@@ -27,3 +27,38 @@
     }
   }
 }
+
+/* 调整 archive 类的内联结束边距 */
+.archive {
+  padding-inline-end: 30px; // 设置右侧内边距
+  
+  // 响应式调整
+  @include breakpoint($small) {
+    padding-inline-end: 15px; // 小屏幕上的值
+  }
+  
+  @include breakpoint($medium) {
+    padding-inline-end: 25px; // 中等屏幕上的值
+  }
+  
+  @include breakpoint($large) {
+    padding-inline-end: 35px; // 大屏幕上的值
+  }
+}
+
+/* 针对特定归档类型调整 */
+.archive__item {
+  // 归档项的右侧内边距
+  padding-inline-end: 20px;
+  
+  .archive__item-title {
+    padding-inline-end: 15px;
+  }
+}
+
+/* 网格布局调整 */
+.archive__item-grid {
+  .archive__item {
+    padding-inline-end: 25px;
+  }
+}
