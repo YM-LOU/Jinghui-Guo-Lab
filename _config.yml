@@ -64,7 +64,8 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-
+atom_feed:
+  hide: true
 # author:
 #   name   : "First Lastname"
 #   avatar : "/assets/images/bio-photo.jpg"
