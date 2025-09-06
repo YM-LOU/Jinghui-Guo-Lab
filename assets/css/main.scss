@@ -7,3 +7,35 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+/* 移除侧边栏并释放空间 */
+.sidebar {
+  display: none !important;
+}
+
+/* 主内容区域扩展到全宽 */
+.archive {
+  width: 100% !important;
+  float: none !important;
+}
+
+/* 调整页面布局结构 */
+.page {
+  .page__inner-wrap {
+    display: block !important;
+  }
+  
+  .page__content {
+    width: 100% !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* 移动设备适配 */
+@media (min-width: 64em) {
+  .layout--single .content,
+  .layout--archive .content {
+    max-width: 100% !important;
+    padding-right: 0 !important;
+  }
+}
