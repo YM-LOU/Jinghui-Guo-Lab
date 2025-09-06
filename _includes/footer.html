@@ -15,31 +15,23 @@
         {% endif %}
       {% endfor %}
     {% endif %}
-
-    {% unless site.atom_feed.hide %}
-      <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-    {% endunless %}
   </ul>
 </div>
 {% endif %}
 
 <div class="page__footer-copyright">
   <div class="footer-left">
-    <div class="copyright-info">
-      &copy; {% assign site_time = site.time | date: '%Y' %}{% if site.footer.since and site_time != site.footer.since %}{{ site.footer.since }} - {% endif %}{{ site_time }} <a href="{{ site.copyright_url | default: site.url }}">{{ site.copyright | default: site.title | escape_once | strip }}</a>.
-    </div>
-    <div class="designed-by">
-      <!-- 您可以在这里更改"Designed by"部分 -->
-      Designed by Yumu LOU. 
-    </div>
-    
-    <div class="footer-right">
-      Ionic Function and Modulation Laboratory<br>
-      The Chinese University of Hong Kong, Shenzhen<br>
-      School of Medicine<br>
-      Research Complex, Room Rx 509<br>
-      Longxiang Blvd. 2001, Longgang District,<br>
-      Shenzhen, Guangdong, China, 518172
+    <p>&copy; {{ site.time | date: '%Y' }} Ionic Lab | Prof. Jinghui GUO.</p>
+    <p>Designed by Yumu LOU.</p>
+  </div>
+  
+  <div class="footer-right">
+    <p>Ionic Function and Modulation Laboratory</p>
+    <p>The Chinese University of Hong Kong, Shenzhen</p>
+    <p>School of Medicine</p>
+    <p>Research Complex, Room Rx 509</p>
+    <p>Longxiang Blvd. 2001, Longgang District,</p>
+    <p>Shenzhen, Guangdong, China, 518172</p>
   </div>
 </div>
 
@@ -49,22 +41,26 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 100%;
+  margin-top: 1em;
 }
 
-.footer-left {
-  display: flex;
-  flex-direction: column;
+.footer-left, .footer-right {
   margin: 10px 0;
 }
 
-.copyright-info, .designed-by {
-  margin-bottom: 5px;
+.footer-left p {
+  margin: 0 0 5px 0;
+  line-height: 1.4;
 }
 
 .footer-right {
   text-align: right;
   font-size: 0.9em;
   line-height: 1.4;
+}
+
+.footer-right p {
+  margin: 0 0 2px 0;
 }
 
 @media (max-width: 768px) {
@@ -75,14 +71,6 @@
   .footer-right {
     text-align: left;
     margin-top: 20px;
-  }
-  
-  .footer-left {
-    order: 2;
-  }
-  
-  .footer-right {
-    order: 1;
   }
 }
 </style>
