@@ -1,70 +1,38 @@
-/* 完全隐藏侧边栏 */
+/* 完全移除侧边栏 */
 .sidebar {
   display: none !important;
-  width: 0 !important;
 }
 
-/* 调整主要内容宽度 */
-.initial-content {
-  width: 100% !important;
-  margin: 0 auto; // 居中显示
-}
-
-/* 调整页面布局 */
-.sidebar__inner,
-.sticky {
-  display: none !important;
-}
-
-/* 移除侧边栏空间 */
+/* 调整主内容区域宽度 */
 .page {
-  .page__inner-wrap {
-    display: block !important;
-    
-    .page__content,
-    .page__related {
-      width: 100% !important;
-      float: none !important;
-      margin-left: 0 !important; // 移除左边距
-      padding-right: 0 !important; // 移除右边距
-      // 添加新的内边距
-      padding-left: 40px;
-      padding-right: 40px;
+  @include breakpoint($large) {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+  }
+}
+
+/* 调整页面内部布局 */
+.page__inner-wrap {
+  display: block !important;
+  
+  .page__content,
+  .page__related {
+    @include breakpoint($large) {
+      width: 100%;
+      float: none;
     }
   }
 }
 
-/* 调整 archive 类的内联结束边距 */
-.archive {
-  padding-inline-end: 30px; // 设置右侧内边距
-  
-  // 响应式调整
-  @include breakpoint($small) {
-    padding-inline-end: 15px; // 小屏幕上的值
-  }
-  
-  @include breakpoint($medium) {
-    padding-inline-end: 25px; // 中等屏幕上的值
-  }
-  
+/* 移除侧边栏相关的留白 */
+.page__related {
+  margin-top: 3em;
+}
+
+/* 可选：调整头部布局（如果受影响） */
+.masthead {
   @include breakpoint($large) {
-    padding-inline-end: 35px; // 大屏幕上的值
-  }
-}
-
-/* 针对特定归档类型调整 */
-.archive__item {
-  // 归档项的右侧内边距
-  padding-inline-end: 20px;
-  
-  .archive__item-title {
-    padding-inline-end: 15px;
-  }
-}
-
-/* 网格布局调整 */
-.archive__item-grid {
-  .archive__item {
-    padding-inline-end: 25px;
+    width: 100%;
   }
 }
