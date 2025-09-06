@@ -1,26 +1,29 @@
-/* 禁用 sticky 侧边栏效果 */
+/* 完全隐藏侧边栏 */
 .sidebar {
-  position: relative !important;
-  top: auto !important;
-  will-change: auto !important;
-  align-self: flex-start !important;
+  display: none !important;
 }
 
-/* 移除 sticky 占位符 */
+/* 调整主要内容宽度 */
+.initial-content {
+  width: 100% !important;
+  margin-left: 0 !important;
+}
+
+/* 调整页面布局 */
+.sidebar__inner,
 .sticky {
   display: none !important;
 }
 
-/* 调整侧边栏滚动行为 */
-.sidebar__inner {
-  position: static !important;
-  overflow: visible !important;
-  height: auto !important;
-  -webkit-transform: none !important;
-          transform: none !important;
-}
-
-/* 测试代码 - 添加醒目标记 */
-body {
-  background-color: red !important; /* 测试自定义文件是否加载 */
+/* 移除侧边栏空间 */
+.page {
+  .page__inner-wrap {
+    display: block !important;
+    
+    .page__content,
+    .page__related {
+      width: 100% !important;
+      float: none !important;
+    }
+  }
 }
