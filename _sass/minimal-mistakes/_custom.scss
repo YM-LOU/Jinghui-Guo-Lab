@@ -1,12 +1,13 @@
 /* 完全隐藏侧边栏 */
 .sidebar {
   display: none !important;
+  width: 0 !important;
 }
 
 /* 调整主要内容宽度 */
 .initial-content {
   width: 100% !important;
-  margin-left: 0 !important;
+  margin: 0 auto; // 居中显示
 }
 
 /* 调整页面布局 */
@@ -24,6 +25,11 @@
     .page__related {
       width: 100% !important;
       float: none !important;
+      margin-left: 0 !important; // 移除左边距
+      padding-right: 0 !important; // 移除右边距
+      // 添加新的内边距
+      padding-left: 40px;
+      padding-right: 40px;
     }
   }
 }
