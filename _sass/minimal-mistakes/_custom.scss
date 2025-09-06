@@ -1,18 +1,19 @@
-/* 调整全局页边距 */
+/* 调整全局边距 */
 .container {
-  padding-left: 20px;  // 左页边距
-  padding-right: 20px; // 右页边距
+  padding-left: 2rem; // 左页边距
+  padding-right: 2rem; // 右页边距
 }
 
-/* 调整移动端页边距 */
+/* 调整移动端边距 */
 @include breakpoint($small) {
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
-/* 调整特定区域页边距 */
+/* 调整内容区域边距 */
 .page__content {
-  padding: 20px 0; // 上下页边距
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
 }
