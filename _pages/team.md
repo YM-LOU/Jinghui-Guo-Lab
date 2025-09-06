@@ -1,2 +1,4 @@
-#Team
-###JInghui GUO
+---
+permalink: /team/
+title: "Team"
+---
