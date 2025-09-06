@@ -1,42 +1,26 @@
-/* 调整全局边距 */
-.container {
-  padding-left: 0rem; // 左页边距
-  padding-right: 0rem; // 右页边距
+/* 禁用 sticky 侧边栏效果 */
+.sidebar {
+  position: relative !important;
+  top: auto !important;
+  will-change: auto !important;
+  align-self: flex-start !important;
 }
 
-/* 调整移动端边距 */
-@include breakpoint($small) {
-  .container {
-    padding-left: 0rem;
-    padding-right: 0rem;
-  }
+/* 移除 sticky 占位符 */
+.sticky {
+  display: none !important;
 }
 
-/* 调整内容区域边距 */
-.page__content {
-  padding-top: 1.5rem;
-  padding-bottom: 3rem;
-}
-
-.initial-content {
-  padding-top: 40px;    // 上边距
-  padding-bottom: 60px; // 下边距
-  padding-left: 30px;   // 左边距
-  padding-right: 30px;  // 右边距
-
-  // 响应式调整（使用主题断点变量）
-  @include breakpoint($medium) {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  @include breakpoint($large) {
-    padding-top: 60px;
-    padding-bottom: 80px;
-  }
+/* 调整侧边栏滚动行为 */
+.sidebar__inner {
+  position: static !important;
+  overflow: visible !important;
+  height: auto !important;
+  -webkit-transform: none !important;
+          transform: none !important;
 }
 
 /* 测试代码 - 添加醒目标记 */
 body {
-  background-color: blue !important; /* 测试自定义文件是否加载 */
+  background-color: red !important; /* 测试自定义文件是否加载 */
 }
