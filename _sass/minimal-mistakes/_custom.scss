@@ -1,14 +1,14 @@
 /* 调整全局边距 */
 .container {
-  padding-left: 2rem; // 左页边距
-  padding-right: 2rem; // 右页边距
+  padding-left: 0rem; // 左页边距
+  padding-right: 0rem; // 右页边距
 }
 
 /* 调整移动端边距 */
 @include breakpoint($small) {
   .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 }
 
@@ -20,7 +20,7 @@
 
 /* 测试代码 - 添加醒目标记 */
 body {
-  background-color: red !important; /* 测试自定义文件是否加载 */
+  background-color: blue !important; /* 测试自定义文件是否加载 */
 }
 
 /* 强制覆盖容器边距 */
