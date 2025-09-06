@@ -1,19 +1,38 @@
-/* 确保没有意外显示 */
+/* 完全移除侧边栏及相关空间 */
 .sidebar {
   display: none !important;
 }
 
-/* 调整主内容区域 */
+/* 调整主内容区域占据全部宽度 */
 .page {
-  width: 100%;
-  padding-right: 0;
+  width: 100% !important;
+  float: none !important;
+  padding-right: 0 !important;
 }
 
-.page__inner-wrap {
-  display: block;
-  
-  .page__content,
-  .page__related {
-    width: 100%;
+/* 移除侧边栏相关的布局空间 */
+@include breakpoint($large) {
+  .initial-content {
+    display: block;
+    
+    .page {
+      width: 100%;
+    }
   }
+}
+
+/* 移除与侧边栏相关的边距和填充 */
+.main-content {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+/* 调整页脚位置 */
+.footer {
+  clear: both;
+}
+
+/* 可选：调整导航栏位置（如果需要） */
+.masthead {
+  width: 100%;
 }
