@@ -3,20 +3,17 @@
 search: false
 ---
 
-@charset "utf-8";
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
+---
+---
 
 
-$grid: (
-  container: 1200px,  
-  columns: 12,       
-  gutters: 0.25,      
-);
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes/variables";
+@import "minimal-mistakes/mixins";
 
 
-$main: 100%;
+$container-width: 1200px !default;
+
 
 .sidebar {
   width: 0;
@@ -41,3 +38,8 @@ $main: 100%;
   width: 100%;
   max-width: $container-width;
 }
+
+
+@import "minimal-mistakes/base";
+@import "minimal-mistakes/layout";
+@import "minimal-mistakes/components";
