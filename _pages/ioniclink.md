@@ -2,7 +2,7 @@
 permalink: /ioniclink/
 title: "IonicLINK"
 layout: single 
-classes: splash
+classes: full
 ---
 
 ionicLINK is an innovative team dedicated to intelligent mental health solutions. Our vision is to transcend existing market paradigms by leveraging cutting-edge biomedical research to transform laboratory-grade neurotechnology into safe, accessible consumer health products. We are committed to leveraging technology to alleviate anxiety, enhance human mental well-being, and ultimately realize our vision of **"a world without anxiety."**
