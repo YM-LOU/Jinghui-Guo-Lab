@@ -17,3 +17,27 @@ $grid: (
 
 
 $main: 100%;
+
+.sidebar {
+  width: 0;
+  display: none;
+}
+
+.page {
+  @include breakpoint($large) {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  @include breakpoint($x-large) {
+    padding-right: 0;
+  }
+}
+
+.page__inner-wrap {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: $container-width;
+}
