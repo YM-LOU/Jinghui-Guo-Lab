@@ -6,8 +6,132 @@ layout: home
 author_profile: true
 ---
 
-I'm trying to change this page
+<div class="welcome-section">
 
-To see what have shown on this website
+  <!-- 实验室图片 -->
+  <div class="welcome-image">
+    <img src="/assets/images/welcome.png" alt="Laboratory of Ion Channel Function and Regulation" class="welcome-img">
+  </div>
 
-Just testing
+  <!-- 欢迎语内容 -->
+  <div class="welcome-content">
+    <h1>Welcome to the Laboratory of Ion Channel Function and Regulation</h1>
+    <h2>Elucidating the Structure, Function, and Regulatory Mechanisms of Ion Channels through Integrative Physiology and Biophysics</h2>
+    
+    <div class="welcome-text">
+      <p>Ion channels are critical protein complexes embedded in the cell membrane, responsible for regulating the transmembrane transport of ions, thereby maintaining cellular electrochemical balance and signal transduction. They play central roles in a wide range of physiological processes, including neural excitation, muscle contraction, hormone secretion, as well as reproductive and immune regulation. Dysfunction of ion channels is closely associated with various major diseases, making in-depth study of their structure and mechanisms highly significant for both basic science and clinical applications.</p>
+      
+      <p>Established in 2023 at the School of Medicine of The Chinese University of Hong Kong, Shenzhen, and led by Presidential Young Scholar Professor Guo Jinghui, our laboratory is dedicated to systematically investigating the physiological and pathological functions of ion channels and their regulatory mechanisms from both basic and interdisciplinary perspectives. Our basic research focuses on the functional mechanisms of ion channels in the reproductive and endocrine systems and their roles in the pathogenesis of related disorders. The interdisciplinary research arm explores optical and ultrasonic modulation of ion channels, aiming to establish them as biological switches for remote and precise cellular control via optogenetics and ultrasound-based techniques. This approach facilitates the development of novel regulatory toolkits for the neural, endocrine, and immune systems, offering new strategies and means for treating associated diseases.</p>
+      
+      <p>We employ a multidisciplinary approach incorporating electrophysiology, molecular biology, fluorescence imaging, optogenetic manipulation, and ultrasonic stimulation to systematically investigate ion channel function across molecular, cellular, and organismal levels. Our long-term goal is to integrate mechanistic insights with engineering methodologies to advance the translational application of ion channel research in precision medicine and therapeutics.</p>
+      
+      <p>Please explore the individual research projects below for further details.</p>
+    </div>
+  </div>
+
+</div>
+
+<style>
+.welcome-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.welcome-image {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.welcome-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.welcome-content h1 {
+  text-align: center;
+  color: #2E86AB;
+  margin-bottom: 1rem;
+  font-size: 2.2rem;
+}
+
+.welcome-content h2 {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 2.5rem;
+  line-height: 1.5;
+}
+
+.welcome-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.welcome-text p {
+  margin-bottom: 1.5rem;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+  .welcome-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .welcome-content h2 {
+    font-size: 1.2rem;
+  }
+  
+  .welcome-text {
+    font-size: 1rem;
+  }
+}
+
+/* 使用主题的按钮样式 */
+.btn-container {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin: 0 0.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn--primary {
+  background-color: #2E86AB;
+  color: white;
+  border: 2px solid #2E86AB;
+}
+
+.btn--primary:hover {
+  background-color: #1C6B8C;
+  border-color: #1C6B8C;
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: #2E86AB;
+  border: 2px solid #2E86AB;
+}
+
+.btn--outline:hover {
+  background-color: #2E86AB;
+  color: white;
+}
+</style>
+
+<!-- 如果您想添加按钮链接到研究项目 -->
+<!-- <div class="btn-container">
+  <a href="/research" class="btn btn--primary">Explore Our Research</a>
+  <a href="/publications" class="btn btn--outline">View Publications</a>
+</div> -->
