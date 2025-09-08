@@ -91,7 +91,7 @@ footer:
     #   url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/YM-LOU/Jinghui-Guo-Lab"
     - label: "Email"
       icon: "fas fa-envelope"
       url: "mailto:guojinghui@cuhk.edu.cn"
