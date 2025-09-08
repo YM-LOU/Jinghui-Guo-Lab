@@ -7,3 +7,13 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+
+$grid: (
+  container: 1200px,  
+  columns: 12,       
+  gutters: 0.25,      
+);
+
+
+$main: 100%;
