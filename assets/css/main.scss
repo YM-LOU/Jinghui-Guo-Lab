@@ -3,43 +3,7 @@
 search: false
 ---
 
----
----
+@charset "utf-8";
 
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
-@import "minimal-mistakes/variables";
-@import "minimal-mistakes/mixins";
-
-
-$container-width: 1200px !default;
-
-
-.sidebar {
-  width: 0;
-  display: none;
-}
-
-.page {
-  @include breakpoint($large) {
-    float: none;
-    width: 100%;
-    padding-right: 0;
-  }
-
-  @include breakpoint($x-large) {
-    padding-right: 0;
-  }
-}
-
-.page__inner-wrap {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  max-width: $container-width;
-}
-
-
-@import "minimal-mistakes/base";
-@import "minimal-mistakes/layout";
-@import "minimal-mistakes/components";
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
