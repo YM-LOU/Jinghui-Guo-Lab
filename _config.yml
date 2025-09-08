@@ -66,6 +66,12 @@ plugins:
   - jekyll-include-cache
 atom_feed:
   hide: true
+
+sidebar:
+  main:
+    enabled: false
+
+    
 author:
   name   : "First Lastname"
   avatar : "/assets/images/bio-photo.jpg"
