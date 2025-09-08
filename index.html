@@ -6,6 +6,7 @@ layout: home
 author_profile: true
 ---
 
+<!-- 您的内容区域 -->
 <div class="welcome-section">
 
   <!-- 实验室图片 -->
@@ -32,10 +33,39 @@ author_profile: true
 </div>
 
 <style>
+/* 移除侧边栏和作者信息空间 */
+.sidebar,
+.author__avatar,
+.author__content,
+.page__footer-follow {
+  display: none !important;
+}
+
+/* 设置主体内容为全宽 */
+.main {
+  float: none !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* 调整页面容器 */
+.page {
+  max-width: 100% !important;
+  padding: 0 2rem !important;
+}
+
+/* 调整内容区域 */
+.page__content {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* 自定义欢迎区域样式 */
 .welcome-section {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
 }
 
 .welcome-image {
@@ -70,6 +100,7 @@ author_profile: true
   font-size: 1.1rem;
   line-height: 1.8;
   color: #333;
+  max-width: 100%;
 }
 
 .welcome-text p {
@@ -78,6 +109,10 @@ author_profile: true
 
 /* 响应式设计 */
 @media screen and (max-width: 768px) {
+  .page {
+    padding: 0 1rem !important;
+  }
+  
   .welcome-content h1 {
     font-size: 1.8rem;
   }
@@ -91,7 +126,7 @@ author_profile: true
   }
 }
 
-/* 使用主题的按钮样式 */
+/* 如果您想添加按钮链接到研究项目 */
 .btn-container {
   text-align: center;
   margin-top: 2.5rem;
@@ -117,21 +152,10 @@ author_profile: true
   background-color: #1C6B8C;
   border-color: #1C6B8C;
 }
-
-.btn--outline {
-  background-color: transparent;
-  color: #2E86AB;
-  border: 2px solid #2E86AB;
-}
-
-.btn--outline:hover {
-  background-color: #2E86AB;
-  color: white;
-}
 </style>
 
 <!-- 如果您想添加按钮链接到研究项目 -->
-<!-- <div class="btn-container">
+<div class="btn-container">
   <a href="/research" class="btn btn--primary">Explore Our Research</a>
   <a href="/publications" class="btn btn--outline">View Publications</a>
-</div> -->
+</div>
