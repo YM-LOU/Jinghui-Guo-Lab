@@ -4,6 +4,83 @@ layout: archive
 
 {{ content }}
 
+
+
+
+{% include base_path %}
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+<!-- 修改1: 移除作者资料部分 -->
+{% unless page.author_profile == false %}
+  <!-- 注释掉或删除作者资料部分 -->
+  {% comment %}
+  {% include author-profile.html %}
+  {% endcomment %}
+{% endunless %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+  
+  <!-- 修改2: 移除侧边栏并设置内容全宽 -->
+  <div class="page__content-fullwidth">
+    {{ content }}
+  </div>
+</div>
+
+<style>
+/* 修改3: 添加全宽样式 */
+.page__content-fullwidth {
+  width: 100% !important;
+  max-width: 100% !important;
+  float: none !important;
+  margin: 0 !important;
+  padding: 2rem !important;
+}
+
+/* 修改4: 隐藏侧边栏 */
+.sidebar {
+  display: none !important;
+}
+
+/* 修改5: 调整页面整体布局 */
+#main {
+  display: block !important;
+}
+
+/* 修改6: 确保所有容器都使用全宽 */
+.container {
+  max-width: 100% !important;
+  padding: 0 2rem !important;
+}
+
+/* 修改7: 调整内容区域内的元素 */
+.archive,
+.article-container {
+  max-width: 100% !important;
+}
+
+/* 修改8: 响应式设计调整 */
+@media screen and (min-width: 1200px) {
+  .page__content-fullwidth {
+    padding: 2rem 4rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page__content-fullwidth {
+    padding: 1rem !important;
+  }
+  
+  .container {
+    padding: 0 1rem !important;
+  }
+}
+</style>
 <!-- <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% if paginator %}
