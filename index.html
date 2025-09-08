@@ -7,20 +7,77 @@ author_profile: false
 sidebar: false 
 ---
 
-<!-- 您的内容区域 -->
-<div class="welcome-section">
 
-  <!-- 实验室图片 -->
+<!-- 您的欢迎内容 -->
+
+<style>
+/* 强制隐藏所有侧边栏元素 */
+.sidebar,
+.author__avatar,
+.author__content,
+.page__related,
+.page__footer-follow {
+  display: none !important;
+}
+
+/* 强制设置主体内容为全宽 */
+.main {
+  float: none !important;
+  width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important;
+}
+
+/* 调整页面容器 */
+.page {
+  max-width: 100% !important;
+  padding: 0 2rem !important;
+}
+
+/* 调整内容区域 */
+.page__content {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+/* 确保所有容器都使用全宽 */
+.container {
+  max-width: 100% !important;
+  padding: 0 2rem !important;
+}
+
+/* 自定义欢迎区域样式 */
+.welcome-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* 响应式设计 */
+@media screen and (max-width: 768px) {
+  .page,
+  .container {
+    padding: 0 1rem !important;
+  }
+  
+  .welcome-section {
+    padding: 1rem 0;
+  }
+}
+</style>
+
+<div class="welcome-section">
+  <!-- 您的图片和欢迎语内容 -->
   <div class="welcome-image">
-    <img src="/assets/images/welcome.png" alt="Laboratory of Ion Channel Function and Regulation" class="welcome-img">
+    <img src="/assets/images/welcome.png" alt="Laboratory of Ion Channel Function and Regulation" style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
   </div>
 
-  <!-- 欢迎语内容 -->
   <div class="welcome-content">
-    <h1>Welcome to the Laboratory of Ion Channel Function and Regulation</h1>
-    <h2>Elucidating the Structure, Function, and Regulatory Mechanisms of Ion Channels through Integrative Physiology and Biophysics</h2>
+    <h1 style="text-align: center; color: #2E86AB; margin-bottom: 1rem;">Welcome to the Laboratory of Ion Channel Function and Regulation</h1>
+    <h2 style="text-align: center; font-size: 1.4rem; font-weight: 400; color: #555; margin-bottom: 2.5rem; line-height: 1.5;">Elucidating the Structure, Function, and Regulatory Mechanisms of Ion Channels through Integrative Physiology and Biophysics</h2>
     
-    <div class="welcome-text">
+    <div class="welcome-text" style="font-size: 1.1rem; line-height: 1.8; color: #333;">
       <p>Ion channels are critical protein complexes embedded in the cell membrane, responsible for regulating the transmembrane transport of ions, thereby maintaining cellular electrochemical balance and signal transduction. They play central roles in a wide range of physiological processes, including neural excitation, muscle contraction, hormone secretion, as well as reproductive and immune regulation. Dysfunction of ion channels is closely associated with various major diseases, making in-depth study of their structure and mechanisms highly significant for both basic science and clinical applications.</p>
       
       <p>Established in 2023 at the School of Medicine of The Chinese University of Hong Kong, Shenzhen, and led by Presidential Young Scholar Professor Guo Jinghui, our laboratory is dedicated to systematically investigating the physiological and pathological functions of ion channels and their regulatory mechanisms from both basic and interdisciplinary perspectives. Our basic research focuses on the functional mechanisms of ion channels in the reproductive and endocrine systems and their roles in the pathogenesis of related disorders. The interdisciplinary research arm explores optical and ultrasonic modulation of ion channels, aiming to establish them as biological switches for remote and precise cellular control via optogenetics and ultrasound-based techniques. This approach facilitates the development of novel regulatory toolkits for the neural, endocrine, and immune systems, offering new strategies and means for treating associated diseases.</p>
@@ -30,6 +87,5 @@ sidebar: false
       <p>Please explore the individual research projects below for further details.</p>
     </div>
   </div>
-
 </div>
 
