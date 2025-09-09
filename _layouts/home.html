@@ -5,100 +5,35 @@ layout: archive
 {{ content }}
 
 
-{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
-  {% include page__hero.html %}
-{% elsif page.header.video.id and page.header.video.provider %}
-  {% include page__hero_video.html %}
-{% endif %}
-
-{% if page.url != "/" and site.breadcrumbs %}
-  {% unless paginator %}
-    {% include breadcrumbs.html %}
-  {% endunless %}
-{% endif %}
-
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive custom-home-width">
-    <!-- 添加自定义容器来控制宽度 -->
-    <div class="custom-home-container">
-      {{ content }}
-    </div>
-    
-    <!-- 保留原有的文章列表 -->
-    {% if paginator %}
-      {% assign posts = paginator.posts %}
-    {% else %}
-      {% assign posts = site.posts %}
-    {% endif %}
-
-    {% assign entries_layout = page.entries_layout | default: 'list' %}
-    <div class="entries-{{ entries_layout }}">
-      {% for post in posts %}
-        {% include archive-single.html type=entries_layout %}
-      {% endfor %}
-    </div>
-
-    {% include paginator.html %}
-  </div>
-</div>
-
-<style>
-/* 自定义主页样式 */
-.custom-home-container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+.sidebar {
+  display: none !important;
 }
 
-/* 确保图片正确显示 */
-.custom-home-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 1.5rem;
-}
-
-/* 调整标题样式 */
-.custom-home-container h1 {
-  text-align: center;
-  color: #2E86AB;
-  margin-bottom: 1rem;
-}
-
-.custom-home-container h2 {
-  text-align: center;
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #555;
-  margin-bottom: 2.5rem;
-  line-height: 1.5;
-}
-
-/* 文本样式 */
-.custom-home-container p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #333;
-  margin-bottom: 1.5rem;
-}
-
-/* 响应式设计 */
-@media screen and (max-width: 768px) {
-  .custom-home-container {
-    padding: 0 1rem;
-  }
-  
-  .custom-home-container h1 {
-    font-size: 1.8rem;
-  }
-  
-  .custom-home-container h2 {
-    font-size: 1.2rem;
+// 扩展主内容区域到全宽，但保留顶部间距
+.page {
+  @include breakpoint($large) {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 0 !important;
+    float: none !important;
+    margin-top: 1em !important;
   }
 }
-</style>
+
+// 调整内容内部容器
+.page__inner-wrap {
+  width: 90% !important;
+  max-width: none !important;
+  margin: 0 auto !important;
+  float: none !important;
+  // 确保内容区域也有适当的内边距
+  padding: 1em 0 !important;
+}
+
+// 如果需要，也可以移除右侧边栏
+.page__related {
+  display: none !important;
+}
 
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
