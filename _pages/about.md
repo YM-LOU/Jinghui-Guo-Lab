@@ -46,7 +46,7 @@ Our laboratory integrates innovative methodologies for the **optical and ultraso
 - **Optogenetic technologies**
 - **Ultrasound-based technologies**
 
-By exploiting properties of **light- and sound-sensitive ion channels**, we achieve spatiotemporally precise, non-invasive manipulation of cellular functions. These advances enable regulation of:
+By exploiting properties of **light- and mechano-sensitive ion channels**, we achieve spatiotemporally precise, non-invasive manipulation of cellular functions. These advances enable regulation of:
 
 - Neural circuit activity
 - Hormone secretion
