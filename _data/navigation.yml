@@ -5,7 +5,7 @@ main:
     url: /team/
   - title: "Publications"
     url: /publications/
-  - title: "Gallary"
+  - title: "Gallery"
     url: /gallery/
   - title: "IonicLINK"
     url: /ioniclink/
