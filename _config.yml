@@ -17,8 +17,8 @@ title: Ionic Lab | Prof. Jinghui GUO
 subtitle: "MED, CUHK(Shenzhen)"
 name: "Jiawei Lin"
 email: guojinghui@cuhk.edu.cn
-url: "https://ym-lou.github.io"
-baseurl: "/Jinghui-Guo-Lab"
+url: "https://ioniclink.com"    
+baseurl: ""    
 repository: "ym-lou/Jinghui-Guo-Lab"
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
