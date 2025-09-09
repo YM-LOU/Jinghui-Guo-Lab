@@ -30,7 +30,7 @@ logo: "/assets/images/logos.png"
 #twitter_username: username
 #github_username: username
 minimal_mistakes_skin: default
-search: true
+search: false
 
 # Build settings
 markdown: kramdown
