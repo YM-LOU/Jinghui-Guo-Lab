@@ -38,3 +38,10 @@ search: false
 .page__related {
   display: none !important;
 }
+
+
+.page__content {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
